@@ -1,6 +1,4 @@
-User: @workspace Could you please create a super simple readme on how to use #file:detect_aruco.py and #file:final_pipeline.py. The detection script is used in the first step to get the transformation matrix from camera coordinate system to the robot coordinate system. The final pipeline then uses yolo11 posetracking to track the nose, uses the transformation matrix from the previous steps and essentially calculates the yaw and tilt angles for the 2DOF robot. 
-
-Workspace: Collecting workspace information# AI2EYE: Camera-to-Robot Calibration and Pose Tracking
+# AI2EYE: Camera-to-Robot Calibration and Pose Tracking
 
 This project provides scripts for calibrating a RealSense camera to a robot coordinate system using ArUco markers and then tracking human poses (specifically the nose) to compute yaw and tilt angles for a 2DOF robot.
 
