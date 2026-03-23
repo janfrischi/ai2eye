@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "ai2eye_master",
+			"path": "../PlatformIO/Projects/ai2eye_master"
+		}
+	],
+	"settings": {}
+}
