@@ -300,6 +300,7 @@ def main():
                 # Transform to robot frame
                 p_robot    = M_transform @ np.array([p_cam[0], p_cam[1], p_cam[2], 1.0])
                 rx, ry, rz = p_robot
+                print(f"p_robot: {p_robot}")
                 
                 # --- Throttle to SEND_INTERVAL before sending ---
                 now = time.time()
@@ -329,7 +330,6 @@ def main():
                     break
                 '''
                 
-
                 cv2.circle(color_image, (tx, ty), 5, (0, 0, 255), -1)
                 cv2.putText(color_image, f"Y:{yaw:.1f} T:{tilt:.1f}",
                             (tx + 10, ty - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
