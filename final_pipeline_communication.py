@@ -300,7 +300,6 @@ def main():
                 # Transform to robot frame
                 p_robot    = M_transform @ np.array([p_cam[0], p_cam[1], p_cam[2], 1.0])
                 rx, ry, rz = p_robot
-                print(f"p_robot: {p_robot}")
                 
                 # --- Throttle to SEND_INTERVAL before sending ---
                 now = time.time()
@@ -309,7 +308,8 @@ def main():
                     continue
                 last_send = now
                 
-                esp.update_pos(TARGET_ID, rx, ry, rz)
+                # Pass non transformed
+                esp.update_pos(TARGET_ID, p_cam[0], p_cam[1], p_cam[2] )
                 skip_reason = "none"
                 
                 yaw  = np.degrees(np.arctan2(ry, rx))
